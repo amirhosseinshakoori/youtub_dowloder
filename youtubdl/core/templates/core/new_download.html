@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div>
+    <div class="app.background">
+        <h2>enter download link</h2>
+        <form class="post.form" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            {{yt}}
+            <button type="submit" class="app-web-sign-up">download</button>
+
+        </form>
+    </div>
+</div>
+<div class="app-folded"></div>
+{% endblock  %}
