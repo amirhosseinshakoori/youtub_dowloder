@@ -10,7 +10,7 @@ def index(request):
 
 
 def downloadLink(request):
-    if request.method == 'POST'
+    if request.method == 'POST':
         form=SaveUrloathform(request.Post)
         if form.is_valid():
             link= form.cleaned_data['link']
@@ -18,6 +18,6 @@ def downloadLink(request):
                 yt=pytube.YouTube(link)
                 yt.streams.first.download()
                 return HttpResponseRedirect('/')
-        else:
-            form = SaveUrloathform()
-        return render(request,'core/new_download.html',{'form':form})    
+    else:
+        form = SaveUrloathform()
+    return render(request,'core/new_download.html',{'form':form})    
