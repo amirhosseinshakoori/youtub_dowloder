@@ -166,3 +166,68 @@ input[type=url]:focus{
     border-color: #0b6dec;
     box-sizing: 0 0 8 px #0b6dec;
 }
+
+@media screen and (max-width:999px){
+    .app-header h1{
+        font-size: 2.4em;
+    }
+    .app-preview img{
+        height: 400px;
+    }
+}
+    
+@media screen and (max-width:779px){
+    .app-column{
+        max-width: 400px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .app-summary{
+        font-size: 12px;
+    }
+    .app-preview img{
+        height: 300px;
+    }
+    .app-folded{
+        top: -55%;
+        background: var(--blue-gradient-tb);
+    }
+}
+
+@media screen and (max-width:740px){
+    .app-folded{
+        top: -50%;
+        right: -5%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .app-folded{
+        top: -45%;
+        right: -5%;
+    }
+}
+
+@media screen and (max-width:480px){
+    .app-folded{
+        top: -25%;
+        right: -5%;
+    }
+    .app-header h1{
+        font-size: 2.2em;
+    }
+    .app-web-sign-up{
+        width: 70%;
+    }
+    .app-web-sign-up::before{
+        bottom: 24%;
+    }
+
+}
+
+@media screen and (max-width:300px){
+    html,body{
+        min-width: 300px;
+        width: 300px !important ;
+    }
+}
